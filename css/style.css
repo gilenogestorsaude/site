@@ -61,7 +61,7 @@ section[id] { scroll-margin-top: calc(var(--topo) + 12px); }
 .marca img { width: 40px; height: 40px; }
 .marca .nome > span { background: var(--degrade); -webkit-background-clip: text; background-clip: text; color: transparent; margin-left: 4px; }
 .menu { display: flex; align-items: center; gap: 28px; }
-.menu a { font-size: .9rem; font-weight: 500; color: var(--texto-2); transition: color .2s; }
+.menu a { font-size: .9rem; font-weight: 500; color: var(--texto-2); transition: color .2s; white-space: nowrap; }
 .menu a:hover, .menu a[aria-current="page"] { color: #fff; }
 .menu a.botao { color: #fff; }
 .botao-menu { display: none; background: none; border: 1px solid var(--borda-2); color: var(--texto); width: 42px; height: 42px; border-radius: 10px; font-size: 1.3rem; cursor: pointer; }
@@ -296,7 +296,7 @@ section, .secao { padding: 96px 0; position: relative; }
   .fundador { grid-template-columns: 240px 1fr; gap: 32px; }
   .rodape-grade { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 860px) {
+@media (max-width: 1100px) {
   .botao-menu { display: grid; place-items: center; }
   .menu {
     position: fixed; top: var(--topo); left: 0; right: 0;
