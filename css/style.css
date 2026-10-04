@@ -344,3 +344,38 @@ section, .secao { padding: 96px 0; position: relative; }
 .peca figcaption b { display: block; font-size: 1.05rem; margin-bottom: 6px; }
 .peca figcaption span { color: var(--texto-2); font-size: .93rem; }
 @media (max-width: 900px) { .vitrine { grid-template-columns: 1fr; } .peca .moldura { height: 280px; } }
+
+/* Calendário do comerciante e campanha do mês */
+.cal-faixa { display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; margin: 6px 0 22px; }
+.cal-chip { padding: 10px 0; text-align: center; border-radius: 10px; background: var(--cartao); border: 1px solid var(--borda); font-size: .78rem; font-weight: 700; color: var(--texto-2); }
+.cal-chip.passado { opacity: .45; }
+.cal-chip.atual { background: linear-gradient(135deg, var(--ciano), var(--azul)); color: #06101c; border-color: transparent; }
+.cal-itens { display: grid; gap: 18px; }
+.cal-item { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.cal-item .c { background: var(--cartao); border: 1px solid var(--borda); border-radius: 20px; padding: 26px; }
+.cal-item .c small { display: block; color: var(--ciano); font-weight: 800; letter-spacing: .1em; font-size: .75rem; margin-bottom: 10px; text-transform: uppercase; }
+.cal-item .c b { display: block; font-size: 1.3rem; margin-bottom: 8px; }
+.cal-item .c p { color: var(--texto-2); margin: 0; }
+.cal-js .cal-item:not(.atual) { display: none; }
+.camp { padding: 56px 0; }
+.camp .caixa { display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: center; padding: 34px 38px; border-radius: 24px;
+  border: 1px solid color-mix(in srgb, var(--cor, #22d3ee) 45%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--cor, #22d3ee) 16%, transparent), color-mix(in srgb, var(--cor, #22d3ee) 4%, transparent)); }
+.camp-itens { display: grid; gap: 28px; }
+.cal-js .camp-item:not(.atual) { display: none; }
+.camp-item .rot { display: inline-flex; gap: 8px; align-items: center; font-weight: 800; letter-spacing: .1em; font-size: .78rem; text-transform: uppercase; color: color-mix(in srgb, var(--cor) 55%, #fff); }
+.camp-item h3 { font-size: 1.9rem; font-weight: 900; margin: 10px 0 6px; letter-spacing: -.02em; }
+.camp-item .tema { font-weight: 700; margin-bottom: 10px; color: color-mix(in srgb, var(--cor) 55%, #fff); }
+.camp-item p { color: var(--texto-2); margin: 0 0 10px; }
+.camp-item .fonte { font-size: .8rem; color: var(--texto-3); }
+.camp-item .fonte a { color: inherit; }
+.fitas { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.fita { text-align: center; font-size: .7rem; font-weight: 800; color: var(--texto-2); letter-spacing: .05em; }
+.fita i { display: block; font-size: 1.6rem; margin-bottom: 2px; }
+.fita.atual { color: #fff; }
+.fita.atual i { font-size: 2.2rem; }
+@media (max-width: 900px) {
+  .cal-item, .camp .caixa { grid-template-columns: 1fr; }
+  .cal-faixa { grid-template-columns: repeat(6, 1fr); }
+  .camp .caixa { padding: 26px 22px; }
+}
