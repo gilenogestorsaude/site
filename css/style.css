@@ -328,3 +328,19 @@ section, .secao { padding: 96px 0; position: relative; }
   .rodape-grade { grid-template-columns: 1fr; }
   .clausula { grid-template-columns: 1fr; gap: 10px; }
 }
+
+/* Telas do sistema (dados fictícios): vitrine no topo e seção "Por dentro" */
+.telas { margin: 0; }
+@media (min-width: 1360px) { .telas { margin: 0 -72px 0 -8px; } }
+.telas img { width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 60px rgba(0, 0, 0, .35)); }
+.telas .exemplo { text-align: center; margin-top: 10px; }
+.vitrine { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 8px; }
+.peca { margin: 0; background: var(--cartao); border: 1px solid var(--borda); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
+.peca .moldura { height: 300px; display: grid; place-items: center; padding: 22px; background: radial-gradient(420px 260px at 50% 0%, rgba(59, 130, 246, .18), transparent 70%); }
+.peca .moldura img { max-width: 100%; max-height: 256px; width: auto; height: auto; object-fit: contain; display: block; filter: drop-shadow(0 18px 30px rgba(0, 0, 0, .45)); }
+.peca .moldura { cursor: zoom-in; }
+.vitrine + .exemplo { text-align: center; margin-top: 18px; }
+.peca figcaption { padding: 18px 22px 22px; border-top: 1px solid var(--borda); }
+.peca figcaption b { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+.peca figcaption span { color: var(--texto-2); font-size: .93rem; }
+@media (max-width: 900px) { .vitrine { grid-template-columns: 1fr; } .peca .moldura { height: 280px; } }
