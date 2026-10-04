@@ -379,3 +379,7 @@ section, .secao { padding: 96px 0; position: relative; }
   .cal-faixa { grid-template-columns: repeat(6, 1fr); }
   .camp .caixa { padding: 26px 22px; }
 }
+
+/* Botão "Indicar um amigo": mesmo destaque do primário, degradê quente */
+.botao-indicar { background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%); color: #1a1205; box-shadow: 0 8px 28px rgba(249, 115, 22, .22); }
+.botao-indicar:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(249, 115, 22, .32); }
