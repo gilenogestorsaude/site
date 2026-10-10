@@ -64,6 +64,9 @@ section[id] { scroll-margin-top: calc(var(--topo) + 12px); }
 .menu a { font-size: .9rem; font-weight: 500; color: var(--texto-2); transition: color .2s; white-space: nowrap; }
 .menu a:hover, .menu a[aria-current="page"] { color: #fff; }
 .menu a.botao { color: #fff; }
+/* "Campanha do mês" na cor da campanha do mês; o js/main.js põe a classe e a cor. */
+.menu a.camp-menu { color: var(--cor-camp); font-weight: 600; }
+.menu a.camp-menu:hover { color: #fff; }
 .botao-menu { display: none; background: none; border: 1px solid var(--borda-2); color: var(--texto); width: 42px; height: 42px; border-radius: 10px; font-size: 1.3rem; cursor: pointer; }
 
 /* ---------- botões, etiquetas ---------- */
