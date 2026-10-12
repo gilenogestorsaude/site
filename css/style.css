@@ -386,3 +386,13 @@ section, .secao { padding: 96px 0; position: relative; }
 /* Botão "Indicar um amigo": mesmo destaque do primário, degradê quente */
 .botao-indicar { background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%); color: #1a1205; box-shadow: 0 8px 28px rgba(249, 115, 22, .22); }
 .botao-indicar:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(249, 115, 22, .32); }
+
+/* Portal de documentos (12/10/2026) */
+.portal-doc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 26px; align-items: start; }
+.portal-tela { min-width: 0; margin: 0; background: var(--cartao); border: 1px solid var(--borda); border-radius: 20px; overflow: hidden; }
+.portal-tela .moldura { display: block; height: 560px; overflow: hidden; }
+.portal-tela .moldura img { width: 100%; height: auto; display: block; }
+.portal-tela figcaption { padding: 12px 18px; color: var(--texto-3); font-size: .8rem; border-top: 1px solid var(--borda); }
+.portal-itens { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 900px) { .portal-doc { grid-template-columns: minmax(0, 1fr); } .portal-tela .moldura { height: 420px; } }
+@media (max-width: 640px) { .portal-itens { grid-template-columns: minmax(0, 1fr); } }
